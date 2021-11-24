@@ -2,6 +2,8 @@ import { makeAutoObservable } from "mobx";
 import { instance } from "./instance";
 import decode from "jwt-decode";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Signup from "../components/Authentication/Signup";
+import TripList from "../components/TripList";
 class AuthStore {
   user = null;
 
@@ -41,7 +43,8 @@ class AuthStore {
     try {
       const res = await instance.post("/signin", user);
       this.setUser(res.data.token);
-      navigation.goBack();
+      // navigation.goBack(TripList);
+      navigation.navigate("TripList");
     } catch (error) {
       toast.show({
         status: "error",

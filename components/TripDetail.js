@@ -15,13 +15,15 @@ const TripDetail = ({ route }) => {
   return (
     <View style={styles.tripDetailWrapper}>
       <Image
-        style={styles.tripDetailImage}
+        // style={styles.tripDetailImage}
+        style={{ resizeMode: "contain", width: 300, height: 300 }}
         source={{ uri: baseURL + trip.image }}
         alt="image"
       />
       <Text style={styles.tripDetailTitle}>{trip.title}</Text>
-      <Text>{trip.description}</Text>
-      <Text>{trip.owner}</Text>
+      <Text style={styles.tripDescription}>{trip.description}</Text>
+      <Text style={styles.tripDescription}>{trip.owner.username}</Text>
+      {console.log(trip.owner.username)}
     </View>
   );
 };
@@ -32,11 +34,22 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   tripDetailImage: {
-    width: 150,
-    height: 150,
+    display: "flex",
+    resizeMode: "contain",
+    width: 250,
+    height: 250,
+    justifyContent: "space-around",
+    alignItems: "center",
   },
   tripDetailTitle: {
     fontWeight: "bold",
     fontSize: 40,
+    color: "gray",
+    textAlign: "center",
+  },
+  tripDescription: {
+    fontSize: 20,
+    color: "pink",
+    textAlign: "center",
   },
 });

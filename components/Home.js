@@ -21,9 +21,14 @@ const config = {
 export const theme = extendTheme({ config });
 
 const Home = ({ navigation }) => {
+  const handleSubmit = () => {};
+
   return (
     <View>
       <Text>Welcome to Trips App home page</Text>
+      <HStack>
+        <Button onPress={handleSubmit}>create trip</Button>
+      </HStack>
     </View>
   );
 };

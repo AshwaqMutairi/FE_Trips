@@ -24,7 +24,8 @@ const Signin = ({ navigation }) => {
 
   const handleSubmit = () => {
     authStore.signin(user, navigation, toast);
-    navigation.replace("TripList");
+
+    // navigation.replace("TripList");
   };
 
   return (

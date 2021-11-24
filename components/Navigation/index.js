@@ -9,22 +9,23 @@ import Signup from "../Authentication/Signup";
 const RootNavigator = () => {
   const { Navigator, Screen } = createStackNavigator();
   return (
-    <Navigator initialRouteName="TripList">
+    <Navigator initialRouteName="Signin">
       <Screen
         name="Home"
         component={Home}
         options={{
           headerStyle: {
-            backgroundColor: "#50bfc3",
+            backgroundColor: "pink",
           },
         }}
       />
       <Screen
         name="TripList"
         component={TripList}
+        // backgroundColor="gray"
         options={({ navigation }) => ({
           headerStyle: {
-            backgroundColor: "#1784b2",
+            backgroundColor: "pink",
           },
         })}
       />
@@ -34,7 +35,7 @@ const RootNavigator = () => {
         options={({ navigation, route }) => {
           return {
             headerStyle: {
-              backgroundColor: "#356290",
+              backgroundColor: "pink",
             },
             title: route.params.trip.name,
           };
