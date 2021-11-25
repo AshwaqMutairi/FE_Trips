@@ -5,6 +5,8 @@ import TripList from "../TripList";
 import TripDetail from "../TripDetail";
 import Signin from "../Authentication/Signin";
 import Signup from "../Authentication/Signup";
+import UpdateTrip from "../UpdateTrip";
+import CreateTrip from "../CreateTrip";
 
 const RootNavigator = () => {
   const { Navigator, Screen } = createStackNavigator();
@@ -13,6 +15,24 @@ const RootNavigator = () => {
       <Screen
         name="Home"
         component={Home}
+        options={{
+          headerStyle: {
+            backgroundColor: "pink",
+          },
+        }}
+      />
+      <Screen
+        name="UpdateTrip"
+        component={UpdateTrip}
+        options={{
+          headerStyle: {
+            backgroundColor: "pink",
+          },
+        }}
+      />
+      <Screen
+        name="CreateTrip"
+        component={CreateTrip}
         options={{
           headerStyle: {
             backgroundColor: "pink",

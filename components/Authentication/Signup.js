@@ -29,37 +29,13 @@ const Signup = ({ navigation }) => {
   return (
     <Center flex={1} px="3">
       <Box safeArea p="2" py="8" w="90%" maxW="290">
-        <Heading
-          size="lg"
-          fontWeight="600"
-          color="coolGray.500"
-          _dark={{
-            color: "warmGray.50",
-          }}
-        >
+        <Heading size="lg" fontWeight="600" color="coolGray.500">
           Create New Account?
         </Heading>
-        <Heading
-          mt="1"
-          _dark={{
-            color: "warmGray.200",
-          }}
-          color="pink.400"
-          fontWeight="medium"
-          size="xs"
-        >
+        <Heading mt="1" color="pink.400" fontWeight="medium" size="xs">
           Join the trips now!
         </Heading>
-        <Heading
-          mt="1"
-          _dark={{
-            color: "warmGray.200",
-          }}
-          color="pink.400"
-          fontWeight="medium"
-          size="xs"
-          bold
-        >
+        <Heading mt="1" color="pink.400" fontWeight="medium" size="xs" bold>
           To EXPLORE the world
         </Heading>
         <VStack space={3} mt="5">
@@ -80,13 +56,7 @@ const Signup = ({ navigation }) => {
             Sign up
           </Button>
           <HStack mt="6" justifyContent="center">
-            <Text
-              fontSize="sm"
-              color="coolGray.600"
-              _dark={{
-                color: "warmGray.200",
-              }}
-            >
+            <Text fontSize="sm" color="coolGray.600">
               I already have an account.{" "}
             </Text>
             <Link

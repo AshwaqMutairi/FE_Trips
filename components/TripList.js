@@ -48,6 +48,11 @@ const TripList = ({ navigation }) => {
     authStore.signout(user, navigation, toast);
     navigation.replace("Signin");
   };
+  //createTrip
+  const handleCreate = () => {
+    // authStore.signout(user, navigation, toast);
+    navigation.replace("CreateTrip");
+  };
 
   const tripList = tripStore.trips.map((trip) => (
     <TripItem navigation={navigation} trip={trip} key={trip._id} />
@@ -55,17 +60,11 @@ const TripList = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        {/* <View> */}
         <HStack>
           <Button onPress={handleSignout}>Sign-out</Button>
-          <Button onPress={handleSignout}>Create New Trip?</Button>
-          {/* <Button title="Show alert" onPress={showAlert}>
-          Create New Trip?
-        </Button> */}
+          <Button onPress={handleCreate}>Create New Trip?</Button>
         </HStack>
         <VStack style={{ marginTop: 50 }}>{tripList}</VStack>
-        {/* <Text>this is trip list page</Text> */}
-        {/* </View> */}
       </ScrollView>
     </SafeAreaView>
   );

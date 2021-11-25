@@ -13,7 +13,7 @@ const TripItem = ({ trip, navigation }) => {
           fontSize: "30",
           fontWeight: "bold",
           letterSpacing: "2",
-          color: "pink",
+          color: "#ffc6ff",
         }}
         onPress={() => navigation.navigate("TripDetail", { trip: trip })}
       >
